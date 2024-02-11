@@ -1,0 +1,43 @@
+CREATE OR REPLACE FUNCTION insert_data(json_data jsonb)
+RETURNS VOID AS $$
+DECLARE
+    item JSONB;
+    keyword TEXT;
+    notebook JSONB;
+    last_dataset_id INT;
+BEGIN
+    -- Extract values from JSON
+    FOR item IN SELECT * FROM jsonb_array_elements(json_data)
+    LOOP
+        -- Insert into Dataset table
+        INSERT INTO Dataset (title, ref, description, totalbytes, forks_count)
+        VALUES (item->>'title', item->>'ref', item->>'description', (item->>'totalBytes')::INT, (item->'stats'->>'forks_count')::INT);
+
+        -- Get the last inserted Dataset id
+        SELECT currval('dataset_id_dataset_seq') INTO last_dataset_id;
+
+        -- Insert into Owner table
+        INSERT INTO Owner (id_dataset, name)
+        VALUES (last_dataset_id, item->'owner'->>'name');
+
+        -- Insert into Keywords table
+        FOR keyword IN SELECT * FROM jsonb_array_elements_text(item->'keywords')
+        LOOP
+            INSERT INTO Keywords (id_dataset, keyword)
+            VALUES (last_dataset_id, keyword);
+        END LOOP;
+
+        -- Insert into Notebooks table
+        FOR notebook IN SELECT * FROM jsonb_array_elements(item->'notebooks')
+        LOOP
+            INSERT INTO Notebooks (id_dataset, title, author_id, totalVotes)
+            VALUES (
+                last_dataset_id,
+                notebook->>'title',
+                (SELECT id_owner FROM owner WHERE name = (notebook->>'author')::TEXT),
+                (notebook->>'totalVotes')::INT
+            );
+        END LOOP;
+    END LOOP;
+END;
+$$ LANGUAGE plpgsql;

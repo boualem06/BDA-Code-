@@ -1,0 +1,108 @@
+[
+    {
+        "ref": "computingvictor/zillow-market-analysis-and-real-estate-sales-data",
+        "title": "\ud83c\udfe0 Airbnb Market Analysis & Real Estate Sales Data",
+        "creator": "ComputingVictor",
+        "totalBytes": 3345259,
+        "lastUpdated": "2024-01-26T16:29:34.33Z",
+        "stats": {
+            "downloadCount": 1895,
+            "voteCount": 45,
+            "viewCount": 9622
+        },
+        "owner": {
+            "ref": "computingvictor",
+            "name": "ComputingVictor"
+        },
+        "usability": 1.0,
+        "keywords": [
+            "housing",
+            "real estate",
+            "exploratory data analysis",
+            "data visualization",
+            "sql"
+        ],
+        "licenses": [
+            {
+                "nameNullable": "MIT",
+                "name": "MIT",
+                "hasName": true
+            }
+        ],
+        "description": "#**Introduction**:\n\nThis dataset, titled 'Airbnb Market Analysis and Real Estate Sales Data (2019),' comprises a comprehensive collection of information pertaining to the Airbnb rental market and property sales in two distinct areas within California: Big Bear and Joshua Tree, along with their associated zip codes (92314, 92315, 92284, and 92252). The dataset provides monthly aggregated data, allowing for an in-depth analysis of rental and real estate market trends in these regions. It includes the following files:\n\n\n#**Datasets**:\n\n##**Market Analysis**:\n\nThis file contains listing-level information from 2019, aggregated on a monthly basis. It encompasses various metrics, such as unique property codes (unified_id), generated revenue, availability (openness), occupancy ratios, nightly rates, lead times, and average length of stay for reservations made each month. Additionally, it provides insights into property amenities.\n\n\n##**Amenities**:\n\nThis file indicates whether a listing has specific amenities, denoting their presence with a value of 1 or their absence with a value of 0. Notably, it identifies the availability of a pool or hot tub in each listing.\n\n\n##**Geolocation**:\n\nThis file contains latitude and longitude coordinates for each listing, enabling precise spatial analysis and visualization.\n\n\n##**Sales Properties**:\n\nThis dataset provides information concerning properties available for sale within the study areas. In the Joshua Tree region (zip codes 92284 and 92252), there are two separate files\u2014one presenting the overall information about sales properties and the other focusing on properties with pools.\n\nThis dataset is a valuable resource for researchers and analysts interested in gaining insights into the real estate and Airbnb rental markets in California, particularly within the specified regions.\"\n\n#**Potential Applications**:\n\nThis dataset provides a strong foundation for Power BI reporting, enabling the creation of insightful reports and dashboards. Analysts can utilize joins on unique IDs to extract key factors and KPIs, facilitating data-driven decision-making. Whether it's optimizing Airbnb listings, making informed real estate investments, or shaping policies, this dataset serves as a valuable resource for Power BI users seeking to gain deeper insights and drive data-driven strategies in the California real estate market",
+        "subtitle": "California (2019) Dataset",
+        "notebooks": [
+            {
+                "ref": "sudhirnl7/real-estate-price-eda-arima-model",
+                "title": "Real Estate Price EDA & ARIMA Model",
+                "author": "Sudhir Kumar",
+                "lastRunTime": "2018-01-12 03:16:38",
+                "totalVotes": 21,
+                "language": ""
+            },
+            {
+                "ref": "leeclemmer/exploratory-data-analysis-of-housing-in-ames-iowa",
+                "title": "Exploratory Data Analysis of Housing in Ames, Iowa",
+                "author": "Lee Clemmer",
+                "lastRunTime": "2017-10-10 12:23:10",
+                "totalVotes": 32,
+                "language": ""
+            },
+            {
+                "ref": "lejimmy/chapter-02-applying-hands-on-ml-with-scikit-learn",
+                "title": "Chapter 02: Applying Hands-on ML with Scikit-Learn",
+                "author": "Jimmy Le",
+                "lastRunTime": "2019-08-08 19:22:29",
+                "totalVotes": 7,
+                "language": ""
+            },
+            {
+                "ref": "masumrumi/zillow-an-analysis-with-visualizations",
+                "title": "Zillow: An analysis with visualizations",
+                "author": "Masum Rumi",
+                "lastRunTime": "2018-01-04 18:12:44",
+                "totalVotes": 6,
+                "language": ""
+            },
+            {
+                "ref": "evanbswanson/seis-631-02-final-project-group-6",
+                "title": "SEIS-631-02 - Final Project - Group 6",
+                "author": "evanbswanson",
+                "lastRunTime": "2023-12-13 02:41:50",
+                "totalVotes": 0,
+                "language": ""
+            },
+            {
+                "ref": "azamatjonkhasanzoda/airbnb-comprehensive-eda-viz-tableau",
+                "title": "AirBnB: Comprehensive EDA+Viz+Tableau",
+                "author": "Azamatjon Khasanzoda",
+                "lastRunTime": "2024-01-28 08:36:31",
+                "totalVotes": 2,
+                "language": ""
+            },
+            {
+                "ref": "jamesgiffin/giffin-makris-saleh-lab1",
+                "title": "Giffin_Makris_Saleh_Lab1",
+                "author": "James Giffin",
+                "lastRunTime": "2020-09-14 16:38:22",
+                "totalVotes": 0,
+                "language": ""
+            },
+            {
+                "ref": "harunekici/airbnb-eda",
+                "title": "airbnb eda",
+                "author": "Harun Ekici",
+                "lastRunTime": "2024-01-31 18:52:36",
+                "totalVotes": 9,
+                "language": ""
+            },
+            {
+                "ref": "asthag25/house-price-analysis-part-1",
+                "title": "House Price Analysis - Part 1",
+                "author": "Astha Gupta",
+                "lastRunTime": "2023-12-31 17:18:02",
+                "totalVotes": 1,
+                "language": ""
+            }
+        ]
+    }]
